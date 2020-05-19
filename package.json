@@ -1,0 +1,17 @@
+{
+  "name": "statemitter",
+  "version": "1.0.1",
+  "description": "A library for observing when state changes",
+  "main": "test.js",
+  "scripts": {
+    "watch": "watchify -d -o example/index.min.js example/index.js & ws -d example",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "local-web-server": "^4.0.0",
+    "watchify": "^3.11.1"
+  }
+}
