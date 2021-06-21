@@ -1,9 +1,9 @@
-const emitState = require('./emitState');
+const emitChange = require('./emitChange');
 
 function setState (state, newState, debounce) {
   Object.assign(state, newState);
 
-  emitState(state, debounce);
+  emitChange(state, debounce);
 }
 
 module.exports = setState;

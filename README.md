@@ -1,8 +1,12 @@
 # Statemitter
 A library for observing when state changes
 
-## Example
+## Installation
+```
+npm i --save statemitter
+```
 
+## Example
 ```javascript
 const {createState, setState} = require('statemitter');
 
@@ -18,3 +22,15 @@ state.on('change', function () {
   console.log('state has changed');
 });
 ```
+
+## Developing
+```
+git clone https://github.com/markwylde/statemitter.git
+cd statemitter
+npm install
+npm run start
+```
+
+Then visit:
+
+http://localhost:8080

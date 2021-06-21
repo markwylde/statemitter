@@ -1,4 +1,4 @@
-function emitState (state, debounce) {
+function emitChange (state, debounce) {
   if (!debounce) {
     return state.eventEmitter.emit('change');
   }
@@ -11,4 +11,4 @@ function emitState (state, debounce) {
   }
 }
 
-module.exports = emitState;
+module.exports = emitChange;

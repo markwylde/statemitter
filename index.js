@@ -1,4 +1,5 @@
 module.exports = {
   createState: require('./createState'),
-  setState: require('./setState')
+  setState: require('./setState'),
+  emitChange: require('./emitChange')
 };
