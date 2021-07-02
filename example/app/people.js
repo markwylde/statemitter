@@ -1,13 +1,12 @@
-const { emitChange } = require('../../');
-
-function create (state, person) {
-  state.people.push(person);
-  emitChange(state);
+function create (state, applyState, person) {
+  applyState({
+    people: [...state.people, person]
+  });
 }
 
-function people (state) {
+function people (state, applyState) {
   return {
-    create: create.bind(null, state)
+    create: create.bind(null, state, applyState)
   };
 }
 

@@ -1,28 +1,28 @@
-const { createState, setState } = require('../../');
+const statemitter = require('../../');
 
 const people = require('./people');
 
 function app () {
-  const state = createState({
+  const [state, applyState, subscribe] = statemitter({
     people: [{
       firstName: 'Mark',
       lastName: 'Wylde'
     }]
   });
 
-  function setPage (state, page) {
-    setState(state, {
-      ...state,
+  function setPage (page) {
+    applyState({
       page
     });
   }
 
   return {
     state,
+    subscribe,
 
-    setPage: setPage.bind(null, state),
+    setPage: setPage.bind(null),
 
-    people: people(state)
+    people: people(state, applyState)
   };
 }
 

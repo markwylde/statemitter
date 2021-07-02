@@ -1,5 +1,5 @@
 # Statemitter
-A library for observing when state changes
+A library for observing when state changes.
 
 ## Installation
 ```
@@ -8,19 +8,23 @@ npm i --save statemitter
 
 ## Example
 ```javascript
-const {createState, setState} = require('statemitter');
+const statemitter = require('statemitter');
 
-const state = createState({
+const [state, applyState, subscribeState] = statemitter({
   number: 1
 });
 
-setState(state, {
+applyState({
   number: state.number + 1;
 });
 
-state.on('change', function () {
+const unsubscribe = subscribe(function () {
   console.log('state has changed');
 });
+
+setTimeout(() => {
+  unsubscribe()
+}, 500);
 ```
 
 ## Developing

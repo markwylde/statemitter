@@ -9,7 +9,7 @@ function ui (app) {
 
   app.setPage(homePage);
 
-  app.state.on('change', render);
+  app.subscribe(render);
   render();
 
   setInterval(function () {
