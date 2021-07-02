@@ -1,9 +1,9 @@
 {
   "name": "@markwylde/statemitter",
+  "version": "2.0.2",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "version": "2.0.0",
   "description": "A library for observing when state changes",
   "main": "lib/index.js",
   "type": "module",
