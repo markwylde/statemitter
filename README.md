@@ -14,12 +14,12 @@ const [state, applyState, subscribeState] = statemitter({
   number: 1
 });
 
-applyState({
-  number: state.number + 1;
-});
-
 const unsubscribe = subscribe(function () {
   console.log('state has changed');
+});
+
+applyState({
+  number: state.number + 1;
 });
 
 setTimeout(() => {
