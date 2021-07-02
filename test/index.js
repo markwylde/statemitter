@@ -1,5 +1,5 @@
-import test from 'basictap';
-import statemitter from '../lib/index.js';
+const test = require('basictap');
+const statemitter = require('../lib/index.js');
 
 test('basic usage', t => {
   t.plan(3);

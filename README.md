@@ -8,7 +8,7 @@ npm i --save statemitter
 
 ## Example
 ```javascript
-const statemitter = require('statemitter');
+import statemitter from 'statemitter';
 
 const [state, applyState, subscribeState] = statemitter({
   number: 1
@@ -28,6 +28,8 @@ setTimeout(() => {
 ```
 
 ## Developing
+There is an example web application that uses statemitter.
+
 ```
 git clone https://github.com/markwylde/statemitter.git
 cd statemitter

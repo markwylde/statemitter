@@ -1,6 +1,8 @@
-import { EventEmitter, Listener }  from 'events';
+import { EventEmitter }  from 'events';
 
 export type State = Object | Array<any>;
+
+export type Listener = (...args: any[]) => void;
 
 /**
  * A function that will be called every time a change
@@ -36,7 +38,7 @@ export interface ApplyFunction {
  * applyNotes({ notes: ['my first note'] });
  * ```
  */
-export function createState (initialState : State) : [
+export function statemitter (initialState : State) : [
   state : State,
   apply : ApplyFunction,
   subscribe : SubscribeFunction
@@ -61,4 +63,8 @@ export function createState (initialState : State) : [
   return [state, applyState, subscribeState];
 }
 
-export default createState;
+export default statemitter;
+
+if (module) {
+  module.exports = statemitter;
+}

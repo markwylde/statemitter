@@ -1,12 +1,11 @@
 {
   "name": "@markwylde/statemitter",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
   "description": "A library for observing when state changes",
   "main": "lib/index.js",
-  "type": "module",
   "scripts": {
     "prepare": "tsc && typedoc",
     "docs": "typedoc",
@@ -28,7 +27,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/events": "^3.0.0",
+    "@types/node": "^15.14.0",
     "basictap": "^2.0.1",
     "c8": "^7.7.3",
     "esbuild": "^0.12.9",
